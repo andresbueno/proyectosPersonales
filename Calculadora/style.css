@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(math-wallpaper-45742-46995-hd-wallpapers.jpg);
+}
+.marco{
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+    background-color: #69c5ed;
+    border: 4px solid #4597bb;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+input::placeholder{
+    color: #1a5f7c;
+}
+input{
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: end;
+    color: #1a5f7c;
+}
+
+.botones{
+    width: 100%;
+    padding: 15px;
+    height: calc(100% - 40px);
+    display: flex;
+}
+.numeros{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+}
+button{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #1a5f7c;
+    
+}
+button:active{
+    background-color: #2482aa;
+}
+.cero{
+    width: 150px;
+}
+.operaciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 23px;
+    align-items: flex-start;
+    height: 100%;
+    width: 30%;
+}
+#clear, #igual{
+    width: 100%;
+}
+.operaciones div{
+    width: 100%;
+    display: flex;
+    column-gap:10px ;
+}

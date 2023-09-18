@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*//////////////////////                       encabezado y menu            ///////////////////// */
+
+
+#abrirMenu{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    position: fixed;
+    top:20px;
+    left: 20px;
+    z-index: 10;
+    transition: ease-in 1s;
+}
+#abrirMenu:active{
+    transition: .1s;
+    transform: scale(1.1);
+}
+#cerrarMenu{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: ease-out 1s;
+}
+#cerrarMenu:active{
+        transition: .1s;
+        transform: scale(0.8);
+}
+
+.menu{
+    width: 200px;
+    background: linear-gradient(180deg, rgba(205, 253, 107, 0.8), rgba(90, 121, 28, 0.9), rgba(90, 121, 28, 0.9), black);
+    border-radius: 2%;
+
+    position: fixed;
+    left: -200px;
+    top: 80px;
+
+    z-index: 20;
+    transition: ease-out 1s;
+}
+.menu ul li{
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 5px;
+}
+.menu ul li a{
+    width: 95%;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 20px 0px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    transition: all .5s;  
+}
+.menu ul li a:hover{
+    color: yellowgreen;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateX(8px);
+}
+.menu hr{
+    border: .6px solid rgb(11, 71, 11);
+    width: 80%;
+    margin-left: 10%;
+}
+
+header{
+    height: 650px;
+    background-image: url(../images/wild8.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: hard-light;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+header h1{
+    width: 100%;
+    color: yellowgreen;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    font-family: fantasy;
+    letter-spacing: 15px;
+    font-weight: lighter;
+}
+/*/////////////////////////////////////                     contenedor 1               //////////////////////////*/
+.primerContenedor{
+    margin: 15px 0px;
+    height: 650px;
+    display: flex;
+    background-image: url(../images/wild4.jpg);
+    background-size: cover;
+}
+.izq{
+    position: relative;
+    width: 35%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+    border-right: 20px double yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    .izq p, .izq h2{
+        text-align: center;
+        color: yellowgreen;
+        font-family: Georgia;
+    }
+    .izq h2{
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-bottom: 30px;
+    }
+    .izq p{
+        font-weight: normal;
+        line-height: 25px;
+    }
+
+/*/////////////////////////////////////                     contenedor 2                //////////////////////////*/
+
+
+.segundoContenedor{
+    margin: 10px 0;
+    height: 800px;
+    background-image: url(../images/wild3.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+}
+.contendoresCirculos{
+    /* border: 1px solid red; */
+    height: 95%;
+    width: 25%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.medio{
+    align-items: center;
+}
+.abajo{
+    align-items: flex-end;
+}
+
+.circulo{
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px dashed yellowgreen;
+    color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+
+    opacity: 0;
+    transition: all 3s;
+}
+
+.circulo h2{
+    margin-top: 80px;
+}
+.circulo p{
+    margin-top: 25px;
+    line-height: 25px;
+}
+
+.rodar{
+    opacity: 1;
+    animation: rodando 3s ease-in-out;
+}
+
+@keyframes rodando{
+    0%{
+        transform: rotate(-360deg);
+        margin-left: -3000px;
+    }100%{
+        transform: rotate(0deg);
+        margin-left: 0px;
+    }
+}
+
+
+/*/////////////////////////////////////                     contenedor 3               //////////////////////////*/
+
+
+.tercerContenedor{
+    height: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    padding-top: 80px;
+    position: relative;
+}
+.tercerContenedor div img{
+    position: absolute;
+    border-radius: 3px;
+    top: -50px;
+    width: 30%;
+    height: 25%;
+}
+
+.tercerContenedor .img2, .img4{
+    left: 680px;
+}
+.tercerContenedor .img1, .img3{
+    left: 20px;
+}
+.tercerContenedor .img1, .tercerContenedor .img2{
+    top: 50px;
+}
+
+.tercerContenedor .img3, .tercerContenedor .img4{
+    top: 510px;
+}
+
+.tercerContenedor div{
+    width: 40%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: justify;
+    padding: 15px;
+    border-right: 5px outset yellowgreen;
+    border-bottom: 3px inset yellowgreen;
+    transition: transform 2s;
+}
+
+.tercerContenedor div h2{
+    margin-right: 10px;
+}

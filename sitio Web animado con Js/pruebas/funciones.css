@@ -1,0 +1,90 @@
+.circulo{
+    margin: 50px auto;
+    background-color: rgb(46, 46, 153);
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+
+.cambiaColor{
+    background-color: black;
+}
+
+.circulo2{
+    margin: 50px auto;
+    background-color: green;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.circulo3{
+    margin: 50px auto;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    color: black;
+}
+.mover{
+    animation: movimiento 2s infinite;
+    /* animation: movimiento 2s alternate infinite; */
+    /* animation: movimiento 2s alternate-reverse ease-in infinite; */
+}
+@keyframes movimiento{
+    0%{
+        transform: rotate(-90deg);
+        background-color: blueviolet;
+    }50%{
+        transform: rotate(90deg);/*0deg*/
+        background-color: blue;
+    }100%{
+        transform: rotate(-90deg);/*90deg*/
+        background-color: cadetblue;
+    }
+}
+
+
+
+
+
+
+
+.clase{
+    border: 1px solid black;
+    height: 600px;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    font-weight: bolder; /*pone las letras de ambos parrafos en estilo negrita*/
+}
+
+input:checked ~ h1{ /*Alt + 126 = ~*/
+    font-weight: lighter;
+    text-align: center;
+    color: tomato;
+    background-color: black;
+}
+input:checked ~ p{ /*Alt + 126 = ~*/
+  
+    color: yellow;
+    background-color: black;
+}
+
+input{
+    display: none;
+}
+label{
+    position: absolute;
+    right: 40px;
+    top: 200px;
+}

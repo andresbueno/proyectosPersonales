@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    background-color: red;
+}
+
+/********************************************************* HEADER *******************************************/
+header{
+    position: relative;
+    height: 45rem;
+    background-image: url(../Images/HeaderImage.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 16px;
+}
+header .titulo{
+    position: absolute;
+    top:15rem;
+    text-align: center;
+    width: 100%;
+    color: burlywood;
+}   
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(150deg, rgba(0, 0, 0, 0.9) 25%, rgba(255, 0, 0, 0.9));
+}
+.contenedorMenuLogo{
+    position: relative;
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#logo{
+    margin-left: 2em;
+    font-size: 1.2em;
+    color: rgb(255, 0, 0);
+}
+nav{
+    margin-right: 2em;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    /* border: 0.1em solid purple; */
+    list-style: none;
+    margin: 0 2rem;
+}
+nav ul li a{
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: red;
+}
+
+header .titulo h1{
+    font-size: 6em;
+}
+header .titulo h3{
+    font-size: 2.5em;
+    text-transform: capitalize;
+}
+
+/********************************************************************** SECTION *********************************************************/
+section{
+    height: auto;
+    width: 100%;
+}
+.contenedor1{
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor1 article{
+    height: 30rem;
+    width: 20rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0.5rem 1.8rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: soft-light;
+    background-position: center;
+    
+    opacity: 1;
+    transition: 1.5s all;
+}
+.contenedor1 #art1{
+    background-image: url(../Images/bram-naus-n8Qb1ZAkK88-unsplash.jpg);
+    /* transform: translateX(8rem); */
+}
+.contenedor1 #art2{
+    background-image: url(../Images/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
+    /* transform: scale(0.7); */
+}
+.contenedor1 #art3{
+    background-image: url(../Images/gabriel-beaudry-5X5dCf4Pp44-unsplash.jpg);
+    /* transform: translateX(-8rem); */
+}
+.contenedor1 article p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.contenedor1 article a{
+    background-color: red;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.6rem;
+    margin-top: 5rem;
+    text-decoration: none;
+    color: white;
+    transition: .5s color;
+}
+.contenedor1 article a:hover{
+    background-color: black;
+    color: red;
+}
+
+/**********************************************************************  CONTENEDOR 2 *******************************************************/
+
+.contenedor2{
+    background-color: rgb(235, 232, 232);
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenedor2 .titulo{
+    width: 100%;
+}
+.contenedor2 .titulo h2{    
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: .5rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 5px 5px 4px rgb(82, 82, 82);
+}
+.contenedor2 .titulo hr{
+    width: 20%;
+    border-color: red;
+    margin: 0 auto;
+}
+.contenedor2 article{
+    width: 18rem;
+    height: 25rem;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.contenedor2 article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contenedor2 article .info{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-25em);
+    transition: 0.5s transform;
+}
+.contenedor2 article .info p{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-top: 4.5em;
+    padding: 0 1rem;
+    line-height: 2rem;
+}
+.contenedor2 article:hover .info{
+    transform: translateY(0em);
+}
+/******************************************  SERVICIOS *******************************************************/
+.servicios{
+    height: auto;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+/**********************  Ventanas modal *********************/
+.ventanaModal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    transform: translateX(-90em) scaleY(0.001);
+    transition: 1s ease-out transform;
+}
+.aparecer{
+    transform: scale(1);
+}
+.ventanaModal .close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 4em;
+    color: rgb(182, 0, 0);
+    cursor: pointer;
+}
+.ventanaModal .contenido{
+    background-color:rgb(173, 173, 173);
+    width: 60%;
+    height: auto;
+    align-self: center;
+    border-radius: 1em;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    opacity: 0;
+    transition: 2.5s ease-out opacity;
+}
+.ventanaModal .contenido p{
+    width: 23rem;
+    align-self: center;
+    line-height: 1.5em;
+    text-align: justify;
+}
+.ventanaModal .contenido img{
+    width: 45%;
+    height: fit-content;
+    border-radius: .5em;
+    margin: 1em;
+    box-shadow: .5em .5em 1em black;
+    align-self: center;
+}
+/**********************  Fin Ventanas modal *********************/
+.info_servicio1{
+    height: auto;
+    width: 32rem;
+    padding: 1rem;
+}
+.info_servicio1 p{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    font-weight: 10px;
+}
+.info_servicio1 h2{
+    font-size: 2.5rem;
+}
+.info_servicio2{
+    height: fit-content;
+    padding: 1rem;    
+    width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.info_servicio2 .contenedorcito{
+    border-radius: 1rem;
+    background-color: rgb(73, 73, 73);
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s transform;
+}
+.info_servicio2 a{
+    text-decoration: none;
+}
+.info_servicio2 .contenedorcito i{
+    font-size: 3rem;
+    margin-bottom: .5em;
+    color: white;
+}
+.info_servicio2 .cont_sm{
+    height: 18rem;
+    width: 20rem;
+}
+.info_servicio2 .cont_bg{
+    height: 22rem;
+    width: 20rem;
+}
+.info_servicio2 .contenedorcito p, .info_servicio2 .contenedorcito h3{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info_servicio2 .contenedorcito:hover{
+    transform: rotate(-10deg) scale(1.1);
+    background-color: rgb(92, 91, 91);
+    cursor: pointer;
+}
